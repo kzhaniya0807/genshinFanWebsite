@@ -1,0 +1,207 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #1d2033;
+    color: #e3e5e8;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #18212c;
+    border-bottom: 2px solid #2d3848;
+}
+
+.logo h2 {
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.logo h2 span {
+    color: #e6b054;
+}
+
+.nav-menu {
+    margin-left: 25px;
+    font-weight: 600;
+    color: #a0a8b6;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #e6b054;
+}
+
+main {
+    padding: 40px 80px;
+}
+
+.filter-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.filter-section p {
+    color: #8a94a6;
+    margin-bottom: 25px;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    background-color: #1e2836;
+    border: 1px solid #344256;
+    color: #c0c7d3;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #e6b054;
+    color: #0f141d;
+    border-color: #e6b054;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.char-card {
+    background-color: #18202c;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #283445;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.char-card:hover {
+    transform: translateY(-6);
+    box-shadow: 0 10px 20px #00000075;
+}
+
+.char-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.char-info {
+    padding: 20px;
+    position: relative;
+}
+
+.char-info h3 {
+    margin: 10px 0 5px;
+    font-size: 1.4rem;
+}
+
+.char-info p {
+    font-size: 0.9rem;
+    color: #a0a8b6;
+}
+
+.char-info small {
+    display: block;
+    margin-top: 10px;
+    color: #6c788a;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge.pyro {
+    background-color: #dc462f; color: #fff;
+}
+.badge.hydro {
+    background-color: #5c95d6; color: #fff;
+}
+.badge.anemo {
+    background-color: #2ab184; color: #fff;
+}
+.badge.geo {
+    background-color: #ecac34; color: #fff;
+}
+
+.badge.cryo {
+    background-color: #70d7f9; color: #101820;
+}
+.badge.dendro {
+    background-color: #7fc935; color: #fff;
+}
+.badge.electro {
+    background-color: #9c4ce2; color: #fff;
+}
+
+.elemental-resonance {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #283445;
+}
+
+.elemental-resonance h2 {
+    margin-bottom: 20px;
+    color: #e6b054;
+}
+
+.synergy-container {
+    display: flex;
+    gap: 20px;
+}
+
+.synergy-box {
+    flex: 1;
+    background-color: #18202c;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #e6b054;
+}
+
+.synergy-box h4 {
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #111722;
+    margin-top: 60px;
+    color: #6c788a;
+    font-size: 0.9rem;
+}
