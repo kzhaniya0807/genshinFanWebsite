@@ -15,7 +15,6 @@
   .home-regions-grid { grid-template-columns: 1fr; }
 }
 /*guides */
-
 @media (max-width: 900px) {
   .guides-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -33,12 +32,6 @@
   }
 
   .guide-hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .guides,
-  .guide-build,
-  .guide-elements {
-    padding: 3rem 1rem;
+    font-size: 2rem;
   }
 }

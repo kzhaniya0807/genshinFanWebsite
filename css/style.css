@@ -369,18 +369,30 @@ main {
 /* GUIDES */
 
 .guide-hero {
-  padding: 4rem 2rem;
+  position: relative;
+  height: 400px;
   text-align: center;
-  background: #112038;
+}
+
+.guide-hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.guide-hero > div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .guide-hero h1 {
   font-size: 3rem;
-  color: #fff;
-}
-
-.guide-hero p {
-  margin-top: 1rem;
+  color: white;
 }
 
 .guides,
@@ -399,15 +411,20 @@ main {
 
 .guide-card {
   background: #112038;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid #2c4057;
   border-radius: 12px;
 }
 
-.guide-card:hover,
-.guide-card:focus-within {
+.guide-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.guide-card:hover {
   border-color: #ab2f54;
-  transform: translateY(-3px);
 }
 
 .guide-build,
@@ -422,16 +439,18 @@ main {
   flex: 1;
 }
 
-.guide-build aside {
+.guide-build img,
+.guide-elements img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.guide-build article,
+.guide-elements article {
   background: #112038;
   padding: 1.5rem;
   border-radius: 12px;
 }
 
-.guide-elements img {
-  border-radius: 12px;
-}
-
-.guide-elements figcaption {
-  padding-top: 0.5rem;
-}
