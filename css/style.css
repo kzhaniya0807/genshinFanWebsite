@@ -366,3 +366,72 @@ main {
 .faq p {
     line-height: 1.5;
 }
+/* GUIDES */
+
+.guide-hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #112038;
+}
+
+.guide-hero h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.guide-hero p {
+  margin-top: 1rem;
+}
+
+.guides,
+.guide-build,
+.guide-elements {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.guide-card {
+  background: #112038;
+  padding: 1.5rem;
+  border: 1px solid #2c4057;
+  border-radius: 12px;
+}
+
+.guide-card:hover,
+.guide-card:focus-within {
+  border-color: #ab2f54;
+  transform: translateY(-3px);
+}
+
+.guide-build,
+.guide-elements {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.guide-build > *,
+.guide-elements > * {
+  flex: 1;
+}
+
+.guide-build aside {
+  background: #112038;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.guide-elements img {
+  border-radius: 12px;
+}
+
+.guide-elements figcaption {
+  padding-top: 0.5rem;
+}
