@@ -23,7 +23,7 @@ a:focus {
   outline-offset: 2px;
 }
 
-
+/* HEADER */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -65,14 +65,14 @@ a:focus {
   color: #0d1117;
 }
 
-
+/* MAIN CONTENT */
 main {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-
+/* FILTERS */
 .filter-section {
   text-align: center;
   margin-bottom: 2rem;
@@ -165,7 +165,7 @@ main {
   color: #a0a8b6;
 }
 
-/* Значки стихий (Badges) */
+/* BADGES */
 .badge {
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
@@ -203,7 +203,7 @@ main {
   color: #fff;
 }
 
-/* Резонанс стихий */
+/* ELEMENTAL RESONANCE */
 .elemental-resonance {
   margin-top: 4rem;
   padding-top: 2rem;
