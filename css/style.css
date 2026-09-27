@@ -23,7 +23,7 @@ a:focus {
   outline-offset: 2px;
 }
 
-/* Шапка (Header) */
+
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -65,14 +65,14 @@ a:focus {
   color: #0d1117;
 }
 
-/* Основной контент */
+
 main {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Фильтры */
+
 .filter-section {
   text-align: center;
   margin-bottom: 2rem;
