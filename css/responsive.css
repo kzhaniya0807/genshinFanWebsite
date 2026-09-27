@@ -12,5 +12,5 @@
   .hero-buttons { flex-direction: column; width: 100%; }
   .btn { width: 100%; text-align: center; }
   .features-grid,
-  .regions-grid { grid-template-columns: 1fr; }
+  .home-regions-grid { grid-template-columns: 1fr; }
 }
