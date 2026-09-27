@@ -116,6 +116,33 @@ main {
   border-color: #ab2f54;
 }
 
+input[name="element-filter"] {
+    display: none;
+}
+
+#pyro:checked ~ .character-display .char-card:not([data-element="pyro"]),
+#hydro:checked ~ .character-display .char-card:not([data-element="hydro"]),
+#anemo:checked ~ .character-display .char-card:not([data-element="anemo"]),
+#electro:checked ~ .character-display .char-card:not([data-element="electro"]),
+#cryo:checked ~ .character-display .char-card:not([data-element="cryo"]),
+#geo:checked ~ .character-display .char-card:not([data-element="geo"]),
+#dendro:checked ~ .character-display .char-card:not([data-element="dendro"]) {
+    display: none !important;
+}
+
+#all:checked ~ .filter-section label[for="all"],
+#pyro:checked ~ .filter-section label[for="pyro"],
+#hydro:checked ~ .filter-section label[for="hydro"],
+#anemo:checked ~ .filter-section label[for="anemo"],
+#electro:checked ~ .filter-section label[for="electro"],
+#cryo:checked ~ .filter-section label[for="cryo"],
+#geo:checked ~ .filter-section label[for="geo"],
+#dendro:checked ~ .filter-section label[for="dendro"] {
+    background-color: #ab2f54;
+    color: #0d1117;
+    border-color: #ab2f54;
+}
+
 
 .character-grid {
   display: grid;
@@ -246,7 +273,6 @@ main {
   color: #e6edf3;
   font-size: 0.9rem;
 }
-
 
 /*Regions*/
 .regions0 {
