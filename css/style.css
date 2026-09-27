@@ -1,152 +1,248 @@
-/*home*/
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #0d1117;
+  background-color: #0d1117;
   color: #e6edf3;
   line-height: 1.6;
 }
 
-img { max-width: 100%; display: block; }
+a {
+  text-decoration: none;
+  color: #ab2f54;
+}
 
-a { color: #ab2f54; text-decoration: none; }
-a:hover, a:focus { color: #133a67; outline: 2px solid #02234a; outline-offset: 2px; }
+a:hover,
+a:focus {
+  color: #133a67;
+  outline: 2px solid #02234a;
+  outline-offset: 2px;
+}
 
-h2 { font-size: 2rem; text-align: center; margin-bottom: 2rem; color: #ab2f54; }
-h3 { color: #ab2f54; margin-bottom: 0.5rem; }
-
-
-.site-header {
+/* Шапка (Header) */
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem 2rem;
-  background: #112038;
+  background-color: #112038;
   border-bottom: 1px solid #2c4057;
 }
 
-.logo { font-size: 1.5rem; font-weight: bold; color: #ab2f54; }
-
-.nav-list { display: flex; gap: 1rem; list-style: none; }
-
-.nav-list a { padding: 0.5rem 1rem; border-radius: 12px; }
-
-.nav-list a:hover, .nav-list a:focus, .nav-list a.active {
-  background: #ab2f54;
-  color: #0d1117;
+.logo h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ab2f54;
 }
 
-
-.hero { position: relative; max-height: 600px; overflow: hidden; }
-
-.hero-img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-  filter: brightness(0.4);
+.logo h2 span {
+  color: #e6edf3;
 }
 
-.hero-content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.hero-content h1 { font-size: 3rem; color: #fff; margin-bottom: 1rem; max-width: 800px; }
-.hero-content p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
-
-.hero-buttons {
+.nav-menu {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+.nav-menu a {
+  padding: 0.5rem 1rem;
   border-radius: 12px;
   font-weight: bold;
+  color: #e6edf3;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus,
+.nav-menu a.active {
   background: #ab2f54;
   color: #0d1117;
 }
 
-.btn:hover, .btn:focus { background: #4a9eff; color: #fff; }
-
-
-.intro {
-  display: flex;
-  gap: 2rem;
+/* Основной контент */
+main {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Фильтры */
+.filter-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ab2f54;
+}
+
+.filter-section p {
+  color: #e6edf3;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
-.intro article { flex: 2 1 400px; }
-
-.intro aside {
-  flex: 1 1 250px;
-  background: #112038;
-  padding: 1.5rem;
-  border-radius: 12px;
-}
-
-.intro ul { list-style: none; margin-top: 0.5rem; }
-.intro li { padding: 0.5rem 0; }
-
-
-.features { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background: #112038;
-  padding: 1.5rem;
-  border-radius: 12px;
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #112038;
   border: 1px solid #2c4057;
+  color: #e6edf3;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus,
+.filter-btn.active {
+  background-color: #ab2f54;
+  color: #0d1117;
+  border-color: #ab2f54;
 }
 
 
-.regions { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-
-.regions-grid {
+.character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.region-card {
-  background: #112038;
+.char-card {
+  background-color: #112038;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #2c4057;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.region-card img { width: 100%; height: 200px; object-fit: cover; }
-.region-card figcaption { padding: 1rem; }
+.char-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
 
+.char-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
 
-.site-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #112038;
+.char-info {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.char-info h3 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  color: #ab2f54;
+}
+
+.char-info p {
+  font-size: 0.95rem;
+  color: #e6edf3;
+}
+
+.char-info small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #a0a8b6;
+}
+
+/* Значки стихий (Badges) */
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge.pyro {
+  background-color: #dc462f;
+  color: #fff;
+}
+.badge.hydro {
+  background-color: #5c95d6;
+  color: #fff;
+}
+.badge.anemo {
+  background-color: #2ab184;
+  color: #fff;
+}
+.badge.geo {
+  background-color: #ecac34;
+  color: #fff;
+}
+.badge.cryo {
+  background-color: #70d7f9;
+  color: #101820;
+}
+.badge.dendro {
+  background-color: #7fc935;
+  color: #fff;
+}
+.badge.electro {
+  background-color: #9c4ce2;
+  color: #fff;
+}
+
+/* Резонанс стихий */
+.elemental-resonance {
+  margin-top: 4rem;
+  padding-top: 2rem;
   border-top: 1px solid #2c4057;
 }
-/*home*/
+
+.elemental-resonance h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ab2f54;
+}
+
+.synergy-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.synergy-box {
+  flex: 1 1 250px;
+  background-color: #112038;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2c4057;
+  border-left: 4px solid #ab2f54;
+}
+
+.synergy-box h4 {
+  margin-bottom: 0.5rem;
+  color: #ab2f54;
+}
+
+
+.main-footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #112038;
+  border-top: 1px solid #2c4057;
+  color: #e6edf3;
+  font-size: 0.9rem;
+}
