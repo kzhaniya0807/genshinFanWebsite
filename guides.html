@@ -1,29 +1,315 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Genshin Fan Website</title>
-
+    <title>Genshin Fan Website | Guides</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .guide-hero {
+            min-height: 40vh;
+            padding: 50px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .guide-hero-content {
+            max-width: 700px;
+        }
+
+        .guide-hero h1 {
+            font-size: 50px;
+        }
+
+        .guide-section {
+            padding: 60px 5%;
+        }
+
+        .guide-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .guide-grid,
+        .reaction-grid {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guide-card,
+        .reaction-card,
+        .faq-item {
+            padding: 25px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .guide-card:hover,
+        .reaction-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .guide-card:focus-within {
+            outline: 3px solid #8aa6b8;
+        }
+
+        .guide-number {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .build {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            gap: 40px;
+        }
+
+        .build > * {
+            flex: 1;
+        }
+
+        .tips {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .tip {
+            padding: 18px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .faq {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        @media (max-width: 768px) {
+            .guide-grid,
+            .reaction-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .build {
+                flex-direction: column;
+            }
+
+            .guide-hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .guide-grid,
+            .reaction-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        
+    <nav class="navbar">
+        <a href="index.html" class="logo">TEYVAT</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="regions.html">Regions</a></li>
+            <li><a href="guides.html">Guides</a></li>
+        </ul>
     </nav>
 </header>
 
 <main>
 
+    <section class="guide-hero">
+        <div class="guide-hero-content">
+            <p>BEGINNER'S GUIDE</p>
+            <h1>Explore Teyvat</h1>
+            <p>
+                Learn the basics of Genshin Impact,
+                combat, characters and exploration.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="guide-section">
+        <h2>Getting Started</h2>
+
+        <div class="guide-grid">
+
+            <article class="guide-card">
+                <span class="guide-number">1</span>
+                <h3>Explore</h3>
+                <p>Discover regions, waypoints and chests.</p>
+            </article>
+
+            <article class="guide-card">
+                <span class="guide-number">2</span>
+                <h3>Complete Quests</h3>
+                <p>Follow quests to discover the story.</p>
+            </article>
+
+            <article class="guide-card">
+                <span class="guide-number">3</span>
+                <h3>Build Characters</h3>
+                <p>Upgrade levels, weapons and talents.</p>
+            </article>
+
+            <article class="guide-card">
+                <span class="guide-number">4</span>
+                <h3>Learn Elements</h3>
+                <p>Combine elements to create reactions.</p>
+            </article>
+
+            <article class="guide-card">
+                <span class="guide-number">5</span>
+                <h3>Manage Resources</h3>
+                <p>Use Mora and materials carefully.</p>
+            </article>
+
+            <article class="guide-card">
+                <span class="guide-number">6</span>
+                <h3>Use Resin</h3>
+                <p>Spend Original Resin to receive rewards.</p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <section class="guide-section">
+        <h2>Elemental Reactions</h2>
+
+        <div class="reaction-grid">
+
+            <article class="reaction-card">
+                <h3>Vaporize</h3>
+                <p>Hydro + Pyro</p>
+            </article>
+
+            <article class="reaction-card">
+                <h3>Melt</h3>
+                <p>Cryo + Pyro</p>
+            </article>
+
+            <article class="reaction-card">
+                <h3>Frozen</h3>
+                <p>Hydro + Cryo</p>
+            </article>
+
+            <article class="reaction-card">
+                <h3>Quicken</h3>
+                <p>Electro + Dendro</p>
+            </article>
+
+            <article class="reaction-card">
+                <h3>Bloom</h3>
+                <p>Hydro + Dendro</p>
+            </article>
+
+            <article class="reaction-card">
+                <h3>Superconduct</h3>
+                <p>Cryo + Electro</p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <section class="guide-section">
+
+        <div class="build">
+
+            <div>
+                <h2>Character Building</h2>
+                <p>
+                    Improve characters by upgrading their
+                    level, weapons, talents and artifacts.
+                </p>
+
+                <ul>
+                    <li>Character Level</li>
+                    <li>Weapon</li>
+                    <li>Talents</li>
+                    <li>Artifacts</li>
+                </ul>
+            </div>
+
+            <aside class="faq-item">
+                <h3>Basic Order</h3>
+                <ol>
+                    <li>Level the character</li>
+                    <li>Upgrade the weapon</li>
+                    <li>Upgrade talents</li>
+                    <li>Choose artifacts</li>
+                </ol>
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <section class="guide-section">
+
+        <h2>Exploration Tips</h2>
+
+        <div class="tips">
+            <div class="tip"><strong>Waypoints:</strong> unlock them when exploring.</div>
+            <div class="tip"><strong>Statues:</strong> activate them to reveal the map.</div>
+            <div class="tip"><strong>Chests:</strong> search areas for hidden rewards.</div>
+            <div class="tip"><strong>Map:</strong> use markers for important locations.</div>
+        </div>
+
+    </section>
+
+
+    <section class="guide-section">
+
+        <h2>FAQ</h2>
+
+        <div class="faq">
+
+            <article class="faq-item">
+                <h3>What should beginners focus on?</h3>
+                <p>Explore, complete quests and develop a small team.</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>Why are elemental reactions important?</h3>
+                <p>They allow elements to interact during combat.</p>
+            </article>
+
+        </div>
+
+    </section>
+
 </main>
 
 <footer>
-    
+    <p>Genshin Fan Website · Fan-made educational project</p>
 </footer>
 
 </body>
