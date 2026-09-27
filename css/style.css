@@ -246,3 +246,121 @@ main {
   color: #e6edf3;
   font-size: 0.9rem;
 }
+
+
+/*Regions*/
+.regions0 {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+    text-align: center;
+
+    background-color: #112038;
+    border-radius: 12px;
+}
+
+.regions0 h1 {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.regions0 p {
+    line-height: 1.6;
+}
+
+/*Regions cards*/
+.regions {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.regions h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.region-grid {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    gap: 25px;
+}
+
+.mondstadt-card,
+.liyue-card,
+.inazuma-card,
+.sumeru-card,
+.fontaine-card,
+.natlan-card,
+.snezhnaya-card {
+    min-height: 320px;
+    padding: 25px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+
+    background-color: rgba(0, 0, 0, 0.4); 
+    background-blend-mode: overlay; 
+    color: white; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.mondstadt-card {
+    background-image: url("../images/mondstadt.png");
+}
+
+.liyue-card {
+    background-image: url("../images/liyue.jpg");
+}
+
+.inazuma-card {
+    background-image: url("../images/inazuma.jpg");
+}
+
+.sumeru-card {
+    background-image: url("../images/sumeru.jpg");
+}
+
+.fontaine-card {
+    background-image: url("../images/fontaine.jpg");
+}
+
+.natlan-card {
+    background-image: url("../images/natlan.jpg");
+}
+
+.snezhnaya-card {
+    background-image: url("../images/snezhnaya.jpg");
+}
+
+.region-grid h3, 
+.region-grid h4, 
+.region-grid p { 
+    position: relative; z-index: 1; 
+} 
+.region-grid h3 { 
+    font-size: 26px; 
+}
+/*Regions timeline&faq*/
+.timeline,
+.faq {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #112038;
+    border-radius: 10px;
+}
+
+.timeline h2,
+.faq h2 {
+    text-align: center;
+}
+
+.faq p {
+    line-height: 1.5;
+}
